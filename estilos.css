@@ -1,6 +1,21 @@
-.clasedeprueba{
+* {
+    margin: 10px; /*margin establece el margen para los cuatro lados*/
+    padding: 5px; /*padding establece el espacio de relleno*/
+    background-color: lightgreen; /*cambia el color de relleno*/
+    font-family: Verdana; /*cambia el tipo de letra*/
+    }
+
+body{
+    background-color: #16DB65;
+}
+
+p{
+    background-color:#16DB65;
+}
+
+h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: brown;
+    background-color: #058C42;
+    text-align: center;
     border: 3px;
-  
 }
