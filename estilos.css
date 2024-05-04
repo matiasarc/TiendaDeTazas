@@ -19,3 +19,63 @@ h1 {
     text-align: center;
     border: 3px;
 }
+
+/*teléfonos celulares */
+@media (max-width: 767px) {
+    .clase {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .clase {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Estilos para pantalla de escritorio */
+@media (min-width: 1024px) {
+    .clase {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+.barra-navegacion {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buscador input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.buscador button {
+    padding: 5px 10px;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.boton {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
