@@ -1,8 +1,9 @@
 * {
-    margin: 10px; /*margin establece el margen para los cuatro lados*/
-    padding: 5px; /*padding establece el espacio de relleno*/
-    background-color: lightgreen; /*cambia el color de relleno*/
-    font-family: Verdana; /*cambia el tipo de letra*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightgreen;
+    font-family: Verdana;
     }
 
 body{
@@ -14,11 +15,11 @@ p{
 }
 
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #058C42;
     text-align: center;
     border: 3px;
 }
+
 
 /*teléfonos celulares */
 @media (max-width: 767px) {
@@ -27,7 +28,6 @@ h1 {
         padding: 5px;
     }
 }
-
 /* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 1023px) {
     .clase {
@@ -35,7 +35,6 @@ h1 {
         padding: 10px;
     }
 }
-
 /* Estilos para pantalla de escritorio */
 @media (min-width: 1024px) {
     .clase {
@@ -44,38 +43,29 @@ h1 {
     }
 }
 
-.barra-navegacion {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.buscador input[type="text"] {
-    padding: 5px;
-    margin-right: 10px;
-    width: 200px;
-}
-
-.buscador button {
-    padding: 5px 10px;
-    background-color: #555;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.boton {
-    background-color: #555;
-    border: none;
-    color: #fff;
-    padding: 8px 16px;
+.navbar {
+    background-color: #16DB65;
+    padding: 10px 0;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li {
+    display: inline;
+}
+.navbar ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #0D2818;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar ul li a:hover {
+    background-color: #058C42;
+    color: #0D2818;
+    border-radius: 5px;
+}  
