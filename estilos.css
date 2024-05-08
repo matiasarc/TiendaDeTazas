@@ -113,3 +113,11 @@ h1 {
 .producto button:hover {
     background-color: #16DB65;
 }
+
+.piepag img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    text-align: left;
+    display: inline-block;
+}
