@@ -8,7 +8,6 @@
 
 
 h1 {
-    background-color: #058C42;
     text-align: center;
     border: 3px;
 }
@@ -40,6 +39,7 @@ h1 {
 .navbar {
     padding: 10px 0;
     text-align: center;
+    /*background-color: #254432;*/
 }
 .navbar ul {
     list-style-type: none;
@@ -60,6 +60,7 @@ h1 {
     background-color: #058C42;
     color: #0D2818;
     border-radius: 5px;
+    color: white;
 }  
 
 /*estilos de la compra*/
@@ -79,7 +80,7 @@ h1 {
 
 .producto {
     margin: 10px;
-    padding: 10px;
+    /*padding: 15px;*/
     width: 250px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
@@ -87,7 +88,8 @@ h1 {
 }
 
 .producto img {
-    width: 100%;
+    /*width: 100%;*/
+    width:18vw;
     border-radius: 5px;
 }
 
@@ -120,4 +122,51 @@ h1 {
     cursor: pointer;
     text-align: left;
     display: inline-block;
+}
+
+.pie{
+    background-color: #254432;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh; /* Para que ocupe toda la altura del viewport */
+    /*max-width: 700px;*/
+}
+
+.form-container h2{
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #147910;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.contacto-options {
+    display: flex;
+}
+
+.contacto-options input[type="radio"],
+.contacto-options label {
+    margin-right: 10px;
 }
