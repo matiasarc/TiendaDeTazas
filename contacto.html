@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tazas</title>
+</head>
+<body>
+    <h2 class="form-container">Contacto</h2>
+    <div class="form-container">
+        <form class="form-group" id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" id="correo" name="correo">
+            </div>
+            <div class="form-group">
+                <label for="consulta">Consulta:</label>
+                <textarea id="consulta" name="consulta" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="motivo">Motivo de la consulta:</label>
+                <select id="motivo" name="motivo">
+                    <option value="">Seleccionar...</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Producto">Producto</option>
+                    <option value="Envío">Envío</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>¿Cómo prefieres ser contactado?</label><br>
+                <div class="contacto-options">
+                    <input type="radio" id="contactoEmail" name="contacto" value="email">
+                    <label for="contactoEmail">Correo electrónico</label>
+                    <input type="radio" id="contactoTelefono" name="contacto" value="telefono">
+                    <label for="contactoTelefono">Teléfono</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Adjuntar imagen:</label>
+                <input type="file" id="imagen" name="imagen">
+            </div>
+            <input type="submit" value="Enviar consulta">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let nombre = document.getElementById('nombre').value;
+            let correo = document.getElementById('correo').value;
+            let consulta = document.getElementById('consulta').value;
+            let motivo = document.getElementById('motivo').value;
+            let contacto = document.querySelector('input[name="contacto"]:checked');
+
+            if (nombre == '' || correo == '' || consulta == '' || motivo == '' || !contacto) {
+                alert('No olvides completar todos los campos.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
