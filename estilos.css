@@ -2,10 +2,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 5px;
     padding: 5px;
-    background-color: lightgreen;
     font-family: Verdana;
     }
 
+body{
+    background-color: lightgreen;
+}
 
 h1 {
     text-align: center;
@@ -26,6 +28,9 @@ h1 {
         font-size: 16px;
         padding: 10px;
     }
+    .container {
+        flex-direction: column;
+    }
 }
 /* Estilos para pantalla de escritorio */
 @media (min-width: 1024px) {
@@ -39,7 +44,8 @@ h1 {
 .navbar {
     padding: 10px 0;
     text-align: center;
-    /*background-color: #254432;*/
+    background-color: #254432;
+    border-radius: 15px; 
 }
 .navbar ul {
     list-style-type: none;
@@ -52,7 +58,7 @@ h1 {
 .navbar ul li a {
     display: inline-block;
     padding: 10px 20px;
-    color: #0D2818;
+    color: white;
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -126,6 +132,9 @@ h1 {
 
 .pie{
     background-color: #254432;
+    color: white;
+    min-height: 100%;
+    border-radius: 15px; 
 }
 
 .form-container {
@@ -170,3 +179,23 @@ h1 {
 .contacto-options label {
     margin-right: 10px;
 }
+
+/*============ESTILOS DE SERVICIOS==============*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    padding: 10px;
+    align-self: stretch;
+}
+.image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+}
+/*============ESTILOS DE SERVICIOS==============*/
