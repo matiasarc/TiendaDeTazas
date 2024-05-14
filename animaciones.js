@@ -15,3 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    nav.classList.toggle ('sticky', this.window.scrollY >80);
+});
