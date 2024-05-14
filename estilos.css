@@ -2,7 +2,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: lightgreen;
     font-family: Verdana;
-    margin: 5px;
     padding: 5px;
     }
 
@@ -39,7 +38,16 @@ h1 {
 .navbar {
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /*background-color: #254432;*/
+}
+.navbar-title {
+    color: #fff;
 }
 .navbar ul {
     list-style-type: none;
@@ -54,6 +62,7 @@ h1 {
     padding: 10px 20px;
     color: #0D2818;
     text-decoration: none;
+    font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .navbar ul li a:hover {
