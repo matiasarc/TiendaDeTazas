@@ -5,7 +5,6 @@ body {
     padding: 5px;
     }
 
-
 h1 {
     text-align: center;
     border: 3px;
@@ -24,6 +23,9 @@ h1 {
     .clase {
         font-size: 16px;
         padding: 10px;
+    }
+    .container {
+        flex-direction: column;
     }
 }
 /* Estilos para pantalla de escritorio */
@@ -65,7 +67,7 @@ h2{
     border-radius: 10px;
 }
 .navbar ul li a {
-    display: inline-block;
+       display: inline-block;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
@@ -93,6 +95,7 @@ h2{
     margin: 10px;
     padding: 10px;
     justify-content: left;
+
 }
 
 .producto {
@@ -139,6 +142,13 @@ h2{
     display: inline-block;
 }
 
+
+.pie{
+    background-color: #254432;
+    color: white;
+    min-height: 100%;
+    border-radius: 15px; 
+}
 .form-container {
     display: flex;
     justify-content: center;
@@ -182,6 +192,7 @@ h2{
     margin-right: 10px;
 }
 
+
 .scroll {
     position: fixed;
     bottom: 2.2rem;
@@ -202,3 +213,23 @@ h2{
     color: white;
     box-shadow: #ffffff 0px 1px 15px;
 }
+
+/*============ESTILOS DE SERVICIOS==============*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    padding: 10px;
+    align-self: stretch;
+}
+.image img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+}
+/*============ESTILOS DE SERVICIOS==============*/
