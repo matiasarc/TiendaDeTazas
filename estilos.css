@@ -1,13 +1,9 @@
-* {
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 5px;
-    padding: 5px;
+    background-image: linear-gradient(to right top, #000000, #40171e, #7c2429, #b73925, #eb5b00);
     font-family: Verdana;
+    padding: 5px;
     }
-
-body{
-    background-color: lightgreen;
-}
 
 h1 {
     text-align: center;
@@ -40,35 +36,48 @@ h1 {
     }
 }
 
-
+h2{
+    margin-top: 100px;
+}
 .navbar {
     padding: 10px 0;
     text-align: center;
-    background-color: #254432;
-    border-radius: 15px; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: gray;
+}
+.navbar-title {
+    color: #fff;
 }
 .navbar ul {
     list-style-type: none;
-    margin: 0;
+    margin: 2px;
     padding: 0;
+    border: #ff6804;
+    box-shadow: #fff;
 }
 .navbar ul li {
     display: inline;
+    border-radius: 10px;
 }
 .navbar ul li a {
-    display: inline-block;
+       display: inline-block;
     padding: 10px 20px;
     color: white;
-    background-color: #123a22;
-    border-radius: 5px;
     text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
 }
 .navbar ul li a:hover {
-    background-color: #058C42;
-    color: #0D2818;
+    background-color: #ff6804;
     border-radius: 5px;
     color: white;
+    box-shadow: #ffffff 0px 1px 15px;
 }  
 
 /*estilos de la compra*/
@@ -83,21 +92,24 @@ h1 {
 .productos-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    justify-content: left;
+
 }
 
 .producto {
     margin: 10px;
     /*padding: 15px;*/
     width: 250px;
-    border: 1px solid #CCCCCC;
     border-radius: 5px;
     text-align: center;
 }
 
 .producto img {
     /*width: 100%;*/
-    width:18vw;
+    width: 10vw;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -110,27 +122,26 @@ h1 {
 }
 
 .producto button {
-    background-color: #058C42;
+    background-color: #cf0a0a;
     color: #FFFFFF;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     cursor: pointer;
 }
 
 .producto button:hover {
-    background-color: #16DB65;
+    background-color: #ff6804;
 }
 
 .piepag img {
-    width: 50px;
     height: auto;
     cursor: pointer;
     text-align: left;
     display: inline-block;
 }
+
 
 .pie{
     background-color: #254432;
@@ -138,7 +149,6 @@ h1 {
     min-height: 100%;
     border-radius: 15px; 
 }
-
 .form-container {
     display: flex;
     justify-content: center;
@@ -180,6 +190,28 @@ h1 {
 .contacto-options input[type="radio"],
 .contacto-options label {
     margin-right: 10px;
+}
+
+
+.scroll {
+    position: fixed;
+    bottom: 2.2rem;
+    border-top: 2rem;
+    right: 3.2rem;
+}
+
+.scroll i {
+    font-size: 22px;
+    color: rgb(245, 245, 245);
+    background: orangered;
+    padding: 10px;
+    border-radius: 2rem;
+}
+.scroll i :hover{
+    background-color: #ff6804;
+    border-radius: 5px;
+    color: white;
+    box-shadow: #ffffff 0px 1px 15px;
 }
 
 /*============ESTILOS DE SERVICIOS==============*/
