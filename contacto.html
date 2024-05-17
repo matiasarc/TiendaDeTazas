@@ -19,7 +19,7 @@
     </nav>
     <h2 class="form-container">Contacto</h2>
     <div class="form-container">
-        <form class="form-group" id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+        <form class="form-group" id="contactForm" action="https://formspree.io/f/xrgndvky" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre">
@@ -52,28 +52,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="imagen">Adjuntar imagen:</label>
+                <label for="imagen">Adjuntar imagen (opcional):</label>
                 <input type="file" id="imagen" name="imagen">
             </div>
+            <p id="my-form-status"></p>
             <input type="submit" value="Enviar consulta">
         </form>
     </div>
 
-    <script>
-        function validateForm() {
-            let nombre = document.getElementById('nombre').value;
-            let correo = document.getElementById('correo').value;
-            let consulta = document.getElementById('consulta').value;
-            let motivo = document.getElementById('motivo').value;
-            let contacto = document.querySelector('input[name="contacto"]:checked');
-
-            if (nombre == '' || correo == '' || consulta == '' || motivo == '' || !contacto) {
-                alert('No olvides completar todos los campos.');
-                return false;
-            }
-            return true;
-        }
-    </script>
-<<  h2></h2>
+    <script src="contactoScript.js"></script>
 </body>
 </html>
