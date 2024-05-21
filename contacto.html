@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Tazas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <script src="animaciones.js"></script>
@@ -22,19 +23,19 @@
         <form class="form-group" id="contactForm" action="#" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
                 <label for="correo">Correo electrónico:</label>
-                <input type="text" id="correo" name="correo">
+                <input type="email" id="correo" name="correo" required>
             </div>
             <div class="form-group">
                 <label for="consulta">Consulta:</label>
-                <textarea id="consulta" name="consulta" rows="4"></textarea>
+                <textarea id="consulta" name="consulta" rows="4" required></textarea>
             </div>
             <div class="form-group">
                 <label for="motivo">Motivo de la consulta:</label>
-                <select id="motivo" name="motivo">
+                <select id="motivo" name="motivo" required>
                     <option value="">Seleccionar...</option>
                     <option value="Compra">Compra</option>
                     <option value="Producto">Producto</option>
@@ -45,9 +46,9 @@
             <div class="form-group">
                 <label>¿Cómo prefieres ser contactado?</label><br>
                 <div class="contacto-options">
-                    <input type="radio" id="contactoEmail" name="contacto" value="email">
+                    <input type="radio" id="contactoEmail" name="contacto" value="email" required>
                     <label for="contactoEmail">Correo electrónico</label>
-                    <input type="radio" id="contactoTelefono" name="contacto" value="telefono">
+                    <input type="radio" id="contactoTelefono" name="contacto" value="telefono" required>
                     <label for="contactoTelefono">Teléfono</label>
                 </div>
             </div>
@@ -74,6 +75,17 @@
             return true;
         }
     </script>
-
+    <footer>
+        <section class="pie">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <ul class="redes-sociales">
+                <li><a href="https://www.facebook.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-instagram'></i> Instagram</a></li>
+                <li><a href="https://www.twitter.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-twitter'></i> Twitter</a></li>
+                <li><a href="mailto:tuemail@example.com" class="piepag"><i class='bx bx-envelope'></i> Correo</a></li>
+            </ul>
+            <p>&copy; 2024 Tazas Locas. Todos los derechos reservados.</p>
+        </section>
+    </footer>
 </body>
 </html>
