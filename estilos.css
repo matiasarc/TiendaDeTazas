@@ -177,8 +177,8 @@ h2{
 }
 
 .form-group input[type="submit"] {
-    padding: 10px 20px;
     background-color: #147910;
+    padding: 10px 20px;
     color: #fff;
     border: none;
     cursor: pointer;
