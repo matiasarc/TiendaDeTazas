@@ -17,10 +17,16 @@ function validateForm() {
 
 var form = document.getElementById("contactForm");
 async function handleSubmit(event) {
-  var status = document.getElementById("my-form-status");
+  //var status = document.getElementById("my-form-status");
+  var status = document.querySelector("#my-form-status");
+  var submitButton = document.querySelector("#submit-button");
   if (!validateForm()){
     status.innerHTML = "No olvides completar todos los campos.";
+    status.style.color = "red";
     return;
+  } 
+  if (validateForm()){
+    submitButton.disabled = true;
   }
   event.preventDefault();
   var data = new FormData(event.target);
@@ -33,6 +39,7 @@ async function handleSubmit(event) {
   }).then(response => {
     if (response.ok) {
       status.innerHTML = "Mensaje recibido, te contactaremos pronto!";
+      status.style.color = "blue";
       form.reset()
     } else {
       response.json().then(data => {
@@ -40,11 +47,15 @@ async function handleSubmit(event) {
           status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
         } else {
           status.innerHTML = "Hubo un error, intenta nuevamente"
+          status.style.color = "red";
+          submitButton.disabled = false;
         }
       })
     }
   }).catch(error => {
     status.innerHTML = "Hubo un error, intentá nuevamente"
+    status.style.color = "red";
+    submitButton.disabled = false;
   });
 }
 form.addEventListener("submit", handleSubmit)
