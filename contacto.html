@@ -20,7 +20,7 @@
     </nav>
     <h2 class="form-container">Contacto</h2>
     <div class="form-container">
-        <form class="form-group" id="contactForm" action="#" method="post" onsubmit="return validateForm()">
+        <form class="form-group" id="contactForm" action="https://formspree.io/f/xrgndvky" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -44,7 +44,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>¿Cómo prefieres ser contactado?</label><br>
+                <label>¿Cómo prefieres ser contactado?</label>
                 <div class="contacto-options">
                     <input type="radio" id="contactoEmail" name="contacto" value="email" required>
                     <label for="contactoEmail">Correo electrónico</label>
@@ -53,39 +53,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="imagen">Adjuntar imagen:</label>
+                <label for="imagen">Adjuntar imagen (opcional):</label>
                 <input type="file" id="imagen" name="imagen">
             </div>
-            <input type="submit" value="Enviar consulta">
+            <p id="my-form-status"></p><br>
+            <input type="submit" id="submit-button" value="Enviar consulta">
         </form>
     </div>
-
-    <script>
-        function validateForm() {
-            let nombre = document.getElementById('nombre').value;
-            let correo = document.getElementById('correo').value;
-            let consulta = document.getElementById('consulta').value;
-            let motivo = document.getElementById('motivo').value;
-            let contacto = document.querySelector('input[name="contacto"]:checked');
-
-            if (nombre == '' || correo == '' || consulta == '' || motivo == '' || !contacto) {
-                alert('No olvides completar todos los campos.');
-                return false;
-            }
-            return true;
-        }
-    </script>
-    <footer>
-        <section class="pie">
-            <h3>Síguenos en nuestras redes sociales</h3>
-            <ul class="redes-sociales">
-                <li><a href="https://www.facebook.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-facebook'></i> Facebook</a></li>
-                <li><a href="https://www.instagram.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-instagram'></i> Instagram</a></li>
-                <li><a href="https://www.twitter.com/tuperfil" class="piepag" target="_blank"><i class='bx bxl-twitter'></i> Twitter</a></li>
-                <li><a href="mailto:tuemail@example.com" class="piepag"><i class='bx bx-envelope'></i> Correo</a></li>
-            </ul>
-            <p>&copy; 2024 Tazas Locas. Todos los derechos reservados.</p>
-        </section>
-    </footer>
 </body>
 </html>
