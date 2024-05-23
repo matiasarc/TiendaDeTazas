@@ -27,6 +27,8 @@ async function handleSubmit(event) {
   } 
   if (validateForm()){
     submitButton.disabled = true;
+    submitButton.setAttribute('disabled', 'disabled');
+    submitButton.classList.add('disabled');
   }
   event.preventDefault();
   var data = new FormData(event.target);
@@ -40,22 +42,26 @@ async function handleSubmit(event) {
     if (response.ok) {
       status.innerHTML = "Mensaje recibido, te contactaremos pronto!";
       status.style.color = "blue";
-      form.reset()
+      form.reset();
+      submitButton.removeAttribute('disabled');
+      submitButton.classList.remove('disabled');
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
-          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
         } else {
-          status.innerHTML = "Hubo un error, intenta nuevamente"
+          status.innerHTML = "Hubo un error, intenta nuevamente";
           status.style.color = "red";
           submitButton.disabled = false;
+          form.reset();
         }
       })
     }
   }).catch(error => {
-    status.innerHTML = "Hubo un error, intentá nuevamente"
+    status.innerHTML = "Hubo un error, intentá nuevamente";
     status.style.color = "red";
     submitButton.disabled = false;
+    form.reset();
   });
 }
-form.addEventListener("submit", handleSubmit)
+form.addEventListener("submit", handleSubmit);
